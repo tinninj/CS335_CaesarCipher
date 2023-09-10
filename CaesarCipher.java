@@ -11,7 +11,7 @@ public class CaesarCipher {
             char c = message.charAt(i); //
 
             if (Character.isLetter(c)) { // Checks if the character is a letter
-                char startingPoint = Character.isUpperCase(c) ? 'A' : 'a'; // Set the starting point at character A/a
+            	char startingPoint = (c >= 'A' && c <= 'Z') ? 'A' : 'a'; // Set the starting point at character A/a
                 char shiftedLetter = (char) (startingPoint + (c - startingPoint + offset) % 26); // This has to be "cast" to char to prevent the data type from changing
                 // The formula keeps the characters within the 26 letters of the alphabet while shifting them to the appropriate position
 
