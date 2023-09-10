@@ -35,7 +35,8 @@ public class CaesarCipher {
         int offset = input.nextInt(); // Takes the offset from the user
         
         String eMessage = cipher(message, offset); //runs the cipher method using the entered message and offset
-
+        
+        System.out.println("Message: " + message);
         System.out.println("Encrypted Message: " + eMessage); // Outputs the encrypted message
     }
 }
